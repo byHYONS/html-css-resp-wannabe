@@ -126,24 +126,100 @@ img {
 
 
 /************************************************
-    SOLUZIONE RESPONSIVE
+            BONUS
  ************************************************/
+ /* Sopra i 768px e fino ai 1160px il layout è un po’ troppo “rigido”! Come mai? */
 
- @media screen and (max-width: 768px){
+ @media (min-width: 768px) and (max-width: 1160px) {
+    
+    h1 {text-align: center;}
+
     .container {
-        width: 768px;
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+    .lessons .col {
+        width: 50%;
+        padding: 30px 20px;
+    }
+
+    .steps .col {
+        width: calc(100% / 3);
+        padding: 30px 20px;
+    }
+
+    .why-us .col-left {
+        width: 45%;
+        padding: 30px 0;
+        padding: 25px;
+    }
+    
+    .why-us .col-right {
+        width: 55%;
+        padding: 30px 0;
+        margin-bottom: 50px;
+    }
+    
+}
+
+/* MADIA QUERY MAX-WIDTH 768PX */
+ @media screen and (max-width: 768px){
+
+    h1, h2 {text-align: center;}
+
+
+
+    .container {
+        width: 100vw;
         margin: 0 auto;
         padding: 0 25px;
     }
 
+    .row {
+        width: 100%;
+    }
+
+    .lessons .col {
+        width: 50%;
+        padding: 30px 20px;
+    }
+
+    .steps .col {
+        width: calc(100% / 3);
+        padding: 30px 15px;
+    }
+
+    .why-us .col-left {
+        width: 40%;
+        padding: 30px 0;
+        padding-right: 20px;
+    }
+    
+    .why-us .col-right {
+        width: 60%;
+        padding: 30px 0;
+        margin-bottom: 50px;
+    }
+
+
+}
+
+/* MADIA QUERY MAX-WIDTH 480PX */
 @media screen and (max-width: 480px){
     .container {
-        width: 480px;
+        width: 100vw;
         margin: 0 auto;
         padding: 0 25px;
     }
 
-    h1 {text-align: center;}
+    h1,h2 {text-align: center;}
     
     .row {
         flex-wrap: wrap;
